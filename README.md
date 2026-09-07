@@ -117,4 +117,4 @@ The project does not use confidential or internal IndiGo data, and the simulated
 
 Independent Portfolio Project | Loyalty Analytics & MIS Reporting
 
-[View Portfolio Website](https://vendetta-tech.github.io/indigo-loyalty-case-study/) | [View Case study](./IndiGo BluChip Loyalty Analytics Case Study.pdf) | [View Presentation](./IndiGo_BluChip_Loyalty_Case_Study_Presentation.pdf) | [Download Excel Workbook](./IndiGo_BluChip_Loyalty_Analytics_Executive.xlsx)
+[View Portfolio Website](https://vendetta-tech.github.io/indigo-loyalty-case-study/) | [View Case study](./IndiGo_BluChip_Loyalty_Analytics_Case_Study.pdf) | [View Presentation](./IndiGo_BluChip_Loyalty_Case_Study_Presentation.pdf) | [Download Excel Workbook](./IndiGo_BluChip_Loyalty_Analytics_Executive.xlsx)
