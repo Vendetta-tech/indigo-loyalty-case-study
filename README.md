@@ -2,6 +2,8 @@
 
 ## Independent Portfolio Case Study | Omkar Pawar
 
+[View Portfolio Website](https://vendetta-tech.github.io/indigo-loyalty-case-study/) | [View Analytics Report](./IndiGo_BluChip_Loyalty_Analytics_Case_Study.pdf) | [View Presentation](./IndiGo_BluChip_Loyalty_Case_Study_Presentation.pdf) | [Download Excel Workbook](./IndiGo_BluChip_Loyalty_Analytics_Executive.xlsx)
+
 ### Project Overview
 
 This independent portfolio case study explores how a loyalty program could improve member acquisition, engagement, campaign performance, and partner collaboration through structured data analysis and business recommendations.
@@ -79,9 +81,13 @@ Used the analysis to develop recommendations related to:
 
 The portfolio website provides an overview of the business problem, methodology, analysis, insights, and recommendations.
 
+### Analytics Report
+
+The report presents the detailed analysis, customer segmentation, channel performance, revenue impact, and key insights.
+
 ### Workbook
 
-The workbook contains the analytical framework, KPI reporting structure, and dashboard outputs.
+The workbook contains the analytical framework, KPI reporting structure, dashboard outputs, and supporting analysis.
 
 ### Presentation
 
@@ -116,5 +122,3 @@ The project does not use confidential or internal IndiGo data, and the simulated
 **Omkar Pawar**
 
 Independent Portfolio Project | Loyalty Analytics & MIS Reporting
-
-[View Portfolio Website](https://vendetta-tech.github.io/indigo-loyalty-case-study/) | [View Case study](./IndiGo_BluChip_Loyalty_Analytics_Case_Study.pdf) | [View Presentation](./IndiGo_BluChip_Loyalty_Case_Study_Presentation.pdf) | [Download Excel Workbook](./IndiGo_BluChip_Loyalty_Analytics_Executive.xlsx)
