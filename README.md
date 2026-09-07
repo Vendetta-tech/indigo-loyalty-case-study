@@ -116,3 +116,5 @@ The project does not use confidential or internal IndiGo data, and the simulated
 **Omkar Pawar**
 
 Independent Portfolio Project | Loyalty Analytics & MIS Reporting
+
+[View Portfolio Website](https://vendetta-tech.github.io/indigo-loyalty-case-study/) | [View Workbook Summary](./IndiGo_BluChip_Workbook_Summary.pdf) | [View Presentation](./IndiGo_BluChip_Loyalty_Case_Study_Presentation.pdf) | [Download Excel Workbook](./YOUR-EXACT-EXCEL-FILE-NAME.xlsx)
