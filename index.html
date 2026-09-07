@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>IndiGo BluChip Loyalty Case Study | Omkar Pawar - Data Analytics Portfolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -13,9 +14,9 @@
     }
 
     body {
-      font-family: 'Segoe UI', 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
-      color: #2c3e50;
-      background: #f8f9fa;
+      font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      color: #2c2c2c;
+      background: #ffffff;
       line-height: 1.7;
       overflow-x: hidden;
     }
@@ -26,10 +27,23 @@
       padding: 0 24px;
     }
 
+    /* ============ INDIGO COLOR SCHEME ============ */
+    :root {
+      --indigo-dark: #0C2D5C;      /* Deep navy blue - IndiGo primary */
+      --indigo-blue: #1E4A80;      /* Rich blue */
+      --indigo-light: #2B5FA3;     /* Lighter blue */
+      --indigo-sky: #3B7BC1;       /* Sky blue accent */
+      --indigo-cream: #FAF8F3;     /* Off-white cream */
+      --indigo-gold: #E8A724;      /* Gold accent */
+      --indigo-white: #FFFFFF;     /* Pure white */
+      --text-dark: #2c2c2c;        /* Dark text */
+      --text-light: #666666;       /* Light gray text */
+    }
+
     /* ============ HEADER WITH HERO ============ */
     header {
-      background: linear-gradient(135deg, #1f4e79 0%, #2c5f96 30%, #0d3a5f 70%, #1a4166 100%);
-      color: white;
+      background: linear-gradient(135deg, var(--indigo-dark) 0%, var(--indigo-blue) 40%, var(--indigo-light) 100%);
+      color: var(--indigo-white);
       padding: 0;
       position: relative;
       overflow: hidden;
@@ -47,7 +61,7 @@
       right: -10%;
       width: 800px;
       height: 800px;
-      background: radial-gradient(circle, rgba(255,215,0,0.15) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(232, 167, 36, 0.12) 0%, transparent 70%);
       border-radius: 50%;
       animation: float 20s ease-in-out infinite;
     }
@@ -59,7 +73,7 @@
       left: -5%;
       width: 600px;
       height: 600px;
-      background: radial-gradient(circle, rgba(100,200,255,0.1) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(232, 167, 36, 0.08) 0%, transparent 70%);
       border-radius: 50%;
       animation: float 25s ease-in-out infinite reverse;
     }
@@ -110,17 +124,17 @@
     }
 
     .logo-placeholder {
-      width: 80px;
-      height: 80px;
-      background: linear-gradient(135deg, #ffd700, #ffed4e);
-      border-radius: 12px;
+      width: 90px;
+      height: 90px;
+      background: linear-gradient(135deg, var(--indigo-gold), #f0b946);
+      border-radius: 16px;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 48px;
-      font-weight: 800;
-      color: #1f4e79;
-      box-shadow: 0 8px 24px rgba(255, 215, 0, 0.3);
+      font-size: 52px;
+      font-weight: 900;
+      color: var(--indigo-dark);
+      box-shadow: 0 12px 32px rgba(232, 167, 36, 0.35);
       position: relative;
       overflow: hidden;
     }
@@ -132,7 +146,7 @@
       left: -100%;
       width: 100%;
       height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
       animation: shine 3s infinite;
     }
 
@@ -149,17 +163,18 @@
     }
 
     .logo-text .brand {
-      font-size: 24px;
-      font-weight: 800;
+      font-size: 28px;
+      font-weight: 900;
       letter-spacing: -0.5px;
-      color: #ffd700;
+      color: var(--indigo-gold);
     }
 
     .logo-text .subbrand {
-      font-size: 14px;
+      font-size: 13px;
       opacity: 0.9;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
+      font-weight: 600;
     }
 
     .kicker {
@@ -167,14 +182,15 @@
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.15em;
-      font-size: 13px;
-      background: rgba(255, 215, 0, 0.25);
-      padding: 10px 20px;
+      font-size: 12px;
+      background: rgba(232, 167, 36, 0.25);
+      padding: 10px 22px;
       border-radius: 25px;
       margin-bottom: 25px;
       backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 215, 0, 0.5);
+      border: 1px solid rgba(232, 167, 36, 0.5);
       animation: slideInDown 0.8s ease 0.3s both;
+      font-weight: 600;
     }
 
     header h1 {
@@ -183,10 +199,7 @@
       margin: 20px 0 30px;
       font-weight: 900;
       letter-spacing: -1px;
-      background: linear-gradient(90deg, #fff 0%, #ffd700 50%, #fff 100%);
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: var(--indigo-white);
       animation: slideInDown 0.8s ease 0.4s both;
     }
 
@@ -195,26 +208,27 @@
       opacity: 0.95;
       max-width: 650px;
       margin: 0 auto 30px;
-      font-weight: 300;
+      font-weight: 400;
       line-height: 1.8;
       animation: slideInDown 0.8s ease 0.5s both;
     }
 
     .note {
-      background: rgba(255, 255, 255, 0.12);
-      border-left: 4px solid #ffd700;
+      background: rgba(232, 167, 36, 0.15);
+      border-left: 4px solid var(--indigo-gold);
       padding: 18px 24px;
       border-radius: 10px;
-      color: white;
+      color: var(--indigo-white);
       margin: 30px auto 0;
       max-width: 600px;
       backdrop-filter: blur(15px);
       font-size: 0.95rem;
       animation: slideInDown 0.8s ease 0.6s both;
+      font-weight: 500;
     }
 
     .note strong {
-      color: #ffd700;
+      color: var(--indigo-gold);
     }
 
     .cta-buttons {
@@ -227,10 +241,10 @@
     }
 
     .btn-primary {
-      background: linear-gradient(135deg, #ffd700, #ffed4e);
-      color: #1f4e79;
+      background: linear-gradient(135deg, var(--indigo-gold), #f0b946);
+      color: var(--indigo-dark);
       padding: 16px 36px;
-      border-radius: 10px;
+      border-radius: 8px;
       text-decoration: none;
       font-weight: 800;
       transition: all 0.3s ease;
@@ -238,10 +252,11 @@
       cursor: pointer;
       text-transform: uppercase;
       letter-spacing: 0.1em;
-      font-size: 14px;
-      box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+      font-size: 13px;
+      box-shadow: 0 12px 32px rgba(232, 167, 36, 0.3);
       position: relative;
       overflow: hidden;
+      font-family: 'Poppins', sans-serif;
     }
 
     .btn-primary::before {
@@ -261,14 +276,14 @@
 
     .btn-primary:hover {
       transform: translateY(-4px);
-      box-shadow: 0 16px 40px rgba(255, 215, 0, 0.4);
+      box-shadow: 0 18px 40px rgba(232, 167, 36, 0.4);
     }
 
     .btn-secondary {
       background: rgba(255, 255, 255, 0.15);
-      color: white;
+      color: var(--indigo-white);
       padding: 16px 36px;
-      border-radius: 10px;
+      border-radius: 8px;
       text-decoration: none;
       font-weight: 800;
       transition: all 0.3s ease;
@@ -276,20 +291,26 @@
       cursor: pointer;
       text-transform: uppercase;
       letter-spacing: 0.1em;
-      font-size: 14px;
+      font-size: 13px;
+      font-family: 'Poppins', sans-serif;
     }
 
     .btn-secondary:hover {
       background: rgba(255, 255, 255, 0.25);
-      border-color: #ffd700;
+      border-color: var(--indigo-gold);
       transform: translateY(-4px);
     }
 
     /* ============ SECTIONS ============ */
     section {
       padding: 80px 0;
-      border-bottom: 1px solid #e8eef6;
+      border-bottom: 1px solid #e8e8e8;
+      background: var(--indigo-white);
       position: relative;
+    }
+
+    section:nth-child(even) {
+      background: var(--indigo-cream);
     }
 
     section:last-of-type {
@@ -297,8 +318,8 @@
     }
 
     section h2 {
-      font-size: 42px;
-      color: #1f4e79;
+      font-size: 44px;
+      color: var(--indigo-dark);
       margin-bottom: 50px;
       font-weight: 900;
       position: relative;
@@ -311,11 +332,11 @@
       position: absolute;
       bottom: 0;
       left: 0;
-      width: 60px;
+      width: 70px;
       height: 5px;
-      background: linear-gradient(90deg, #1f4e79, #ffd700, #2c5f96);
+      background: linear-gradient(90deg, var(--indigo-dark), var(--indigo-gold));
       border-radius: 3px;
-      box-shadow: 0 2px 8px rgba(31, 78, 121, 0.2);
+      box-shadow: 0 2px 8px rgba(12, 45, 92, 0.15);
     }
 
     /* ============ GRIDS ============ */
@@ -336,14 +357,18 @@
 
     /* ============ CARDS ============ */
     .card {
-      background: white;
-      border: 1px solid #e8eef6;
-      border-radius: 16px;
+      background: var(--indigo-white);
+      border: 1px solid #e0e0e0;
+      border-radius: 14px;
       padding: 36px;
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
       position: relative;
       overflow: hidden;
+    }
+
+    section:nth-child(even) .card {
+      background: var(--indigo-white);
     }
 
     .card::before {
@@ -353,7 +378,7 @@
       left: 0;
       width: 5px;
       height: 0;
-      background: linear-gradient(180deg, #1f4e79, #ffd700);
+      background: linear-gradient(180deg, var(--indigo-dark), var(--indigo-gold));
       transition: height 0.3s ease;
     }
 
@@ -364,15 +389,15 @@
       right: -50%;
       width: 100%;
       height: 100%;
-      background: radial-gradient(circle, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(232, 167, 36, 0.08) 0%, transparent 70%);
       opacity: 0;
       transition: opacity 0.3s ease;
     }
 
     .card:hover {
       transform: translateY(-12px);
-      box-shadow: 0 20px 40px rgba(31, 78, 121, 0.12);
-      border-color: #1f4e79;
+      box-shadow: 0 16px 32px rgba(12, 45, 92, 0.12);
+      border-color: var(--indigo-light);
     }
 
     .card:hover::before {
@@ -385,7 +410,7 @@
 
     .card h3 {
       font-size: 22px;
-      color: #1f4e79;
+      color: var(--indigo-dark);
       margin-bottom: 16px;
       font-weight: 800;
       position: relative;
@@ -393,11 +418,12 @@
     }
 
     .card p {
-      color: #555;
+      color: var(--text-light);
       font-size: 0.95rem;
       line-height: 1.8;
       position: relative;
       z-index: 2;
+      font-weight: 400;
     }
 
     .card ul {
@@ -411,7 +437,7 @@
       padding-left: 32px;
       margin-bottom: 14px;
       position: relative;
-      color: #555;
+      color: var(--text-light);
       font-weight: 500;
     }
 
@@ -419,7 +445,7 @@
       content: '✓';
       position: absolute;
       left: 0;
-      color: #1f4e79;
+      color: var(--indigo-gold);
       font-weight: 900;
       font-size: 18px;
     }
@@ -433,13 +459,13 @@
     }
 
     .kpi {
-      background: linear-gradient(135deg, #1f4e79 0%, #2c5f96 100%);
-      color: white;
-      border-radius: 16px;
+      background: linear-gradient(135deg, var(--indigo-dark) 0%, var(--indigo-blue) 100%);
+      color: var(--indigo-white);
+      border-radius: 14px;
       padding: 32px 24px;
       text-align: center;
       transition: all 0.3s ease;
-      box-shadow: 0 8px 24px rgba(31, 78, 121, 0.2);
+      box-shadow: 0 8px 24px rgba(12, 45, 92, 0.18);
       position: relative;
       overflow: hidden;
     }
@@ -451,7 +477,7 @@
       right: 0;
       width: 100px;
       height: 100px;
-      background: radial-gradient(circle, rgba(255, 215, 0, 0.2) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(232, 167, 36, 0.2) 0%, transparent 70%);
       border-radius: 50%;
       transform: translate(30px, -30px);
     }
@@ -462,19 +488,19 @@
       bottom: 0;
       left: 0;
       width: 100%;
-      height: 4px;
-      background: linear-gradient(90deg, transparent, #ffd700, transparent);
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--indigo-gold), transparent);
       opacity: 0;
       transition: opacity 0.3s ease;
     }
 
     .kpi:nth-child(even) {
-      background: linear-gradient(135deg, #0d3a5f 0%, #1f4e79 100%);
+      background: linear-gradient(135deg, var(--indigo-blue) 0%, var(--indigo-light) 100%);
     }
 
     .kpi:hover {
       transform: translateY(-12px);
-      box-shadow: 0 16px 40px rgba(31, 78, 121, 0.3);
+      box-shadow: 0 16px 40px rgba(12, 45, 92, 0.25);
     }
 
     .kpi:hover::after {
@@ -503,11 +529,11 @@
     /* ============ BUTTONS ============ */
     .button {
       display: inline-block;
-      background: linear-gradient(135deg, #1f4e79, #2c5f96);
-      color: white;
+      background: linear-gradient(135deg, var(--indigo-dark), var(--indigo-blue));
+      color: var(--indigo-white);
       text-decoration: none;
       padding: 16px 32px;
-      border-radius: 10px;
+      border-radius: 8px;
       font-weight: 800;
       margin-top: 20px;
       transition: all 0.3s ease;
@@ -518,7 +544,8 @@
       font-size: 12px;
       position: relative;
       overflow: hidden;
-      box-shadow: 0 6px 16px rgba(31, 78, 121, 0.2);
+      box-shadow: 0 6px 16px rgba(12, 45, 92, 0.18);
+      font-family: 'Poppins', sans-serif;
     }
 
     .button::before {
@@ -528,13 +555,13 @@
       left: -100%;
       width: 100%;
       height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.3), transparent);
+      background: linear-gradient(90deg, transparent, rgba(232, 167, 36, 0.3), transparent);
       transition: left 0.4s ease;
     }
 
     .button:hover {
       transform: translateY(-4px);
-      box-shadow: 0 12px 28px rgba(31, 78, 121, 0.3);
+      box-shadow: 0 12px 28px rgba(12, 45, 92, 0.25);
     }
 
     .button:hover::before {
@@ -553,9 +580,9 @@
     }
 
     .download-card {
-      background: white;
-      border: 2px solid #e8eef6;
-      border-radius: 16px;
+      background: var(--indigo-white);
+      border: 2px solid #e0e0e0;
+      border-radius: 14px;
       padding: 40px 32px;
       text-align: center;
       transition: all 0.3s ease;
@@ -570,15 +597,15 @@
       left: 0;
       right: 0;
       height: 5px;
-      background: linear-gradient(90deg, #1f4e79, #ffd700, #2c5f96);
+      background: linear-gradient(90deg, var(--indigo-dark), var(--indigo-gold), var(--indigo-blue));
       transform: scaleX(0);
       transform-origin: left;
       transition: transform 0.3s ease;
     }
 
     .download-card:hover {
-      border-color: #1f4e79;
-      box-shadow: 0 16px 40px rgba(31, 78, 121, 0.15);
+      border-color: var(--indigo-dark);
+      box-shadow: 0 16px 40px rgba(12, 45, 92, 0.15);
       transform: translateY(-12px);
     }
 
@@ -588,7 +615,7 @@
 
     .file-icon {
       font-size: 56px;
-      color: #1f4e79;
+      color: var(--indigo-dark);
       margin-bottom: 20px;
       position: relative;
       z-index: 2;
@@ -596,7 +623,7 @@
 
     .download-card h3 {
       font-size: 22px;
-      color: #1f4e79;
+      color: var(--indigo-dark);
       margin-bottom: 14px;
       font-weight: 800;
       position: relative;
@@ -604,18 +631,19 @@
     }
 
     .download-card p {
-      color: #666;
+      color: var(--text-light);
       font-size: 0.95rem;
       margin-bottom: 24px;
       line-height: 1.6;
       position: relative;
       z-index: 2;
+      font-weight: 400;
     }
 
     /* ============ FOOTER ============ */
     footer {
-      background: linear-gradient(135deg, #1f4e79 0%, #2c5f96 100%);
-      color: white;
+      background: linear-gradient(135deg, var(--indigo-dark) 0%, var(--indigo-blue) 100%);
+      color: var(--indigo-white);
       padding: 60px 0;
       text-align: center;
       margin-top: 80px;
@@ -629,7 +657,7 @@
       right: -200px;
       width: 400px;
       height: 400px;
-      background: radial-gradient(circle, rgba(255, 215, 0, 0.08) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(232, 167, 36, 0.08) 0%, transparent 70%);
       border-radius: 50%;
     }
 
@@ -644,7 +672,7 @@
     footer .divider {
       width: 50px;
       height: 3px;
-      background: linear-gradient(90deg, transparent, #ffd700, transparent);
+      background: linear-gradient(90deg, transparent, var(--indigo-gold), transparent);
       margin: 20px auto;
     }
 
@@ -793,7 +821,7 @@
           <div class="card">
             <h3>🎯 The Core Problem</h3>
             <p>Growing a loyalty program extends far beyond acquiring new sign-ups. The true challenge lies in converting members into active, engaged repeat customers while building strategic touchpoints between flight purchases.</p>
-            <p style="margin-top: 16px; color: #1f4e79; font-weight: 600;">Most programs measure success by volume, missing critical insights about member quality and lifetime value.</p>
+            <p style="margin-top: 16px; color: var(--indigo-dark); font-weight: 600;">Most programs measure success by volume, missing critical insights about member quality and lifetime value.</p>
           </div>
         </div>
         <div>
@@ -866,7 +894,7 @@
       <div class="grid grid-3" style="margin-top: 50px;">
         <div class="card">
           <h3>📊 Funnel Framework</h3>
-          <p><strong style="color: #1f4e79;">Acquisition → Engagement → Conversion → Value</strong></p>
+          <p><strong style="color: var(--indigo-dark);">Acquisition → Engagement → Conversion → Value</strong></p>
           <p style="margin-top: 12px;">This proven framework reveals member quality, not just volume. It identifies which channels drive members who actually engage and convert.</p>
         </div>
         <div class="card">
@@ -971,7 +999,7 @@
   <section id="project-files">
     <div class="wrap">
       <h2>Complete Case Study Assets</h2>
-      <p style="font-size: 1.05rem; color: #555; margin-bottom: 50px;">Access the full analysis, interactive dashboards, and executive presentation:</p>
+      <p style="font-size: 1.05rem; color: var(--text-light); margin-bottom: 50px;">Access the full analysis, interactive dashboards, and executive presentation:</p>
       <div class="downloads">
         <div class="download-card">
           <div class="file-icon">
