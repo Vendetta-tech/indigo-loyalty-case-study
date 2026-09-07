@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IndiGo BluChip Loyalty Case Study | Omkar Pawar - Portfolio</title>
+  <title>IndiGo BluChip Loyalty Case Study | Omkar Pawar - Data Analytics Portfolio</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     * {
@@ -13,7 +13,7 @@
     }
 
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-family: 'Segoe UI', 'Roboto', Tahoma, Geneva, Verdana, sans-serif;
       color: #2c3e50;
       background: #f8f9fa;
       line-height: 1.7;
@@ -26,42 +26,140 @@
       padding: 0 24px;
     }
 
-    /* Header Styles */
+    /* ============ HEADER WITH HERO ============ */
     header {
-      background: linear-gradient(135deg, #1f4e79 0%, #2c5f96 50%, #0d3a5f 100%);
+      background: linear-gradient(135deg, #1f4e79 0%, #2c5f96 30%, #0d3a5f 70%, #1a4166 100%);
       color: white;
-      padding: 80px 0 60px;
+      padding: 0;
       position: relative;
       overflow: hidden;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
+    /* Animated background elements */
     header::before {
       content: '';
       position: absolute;
-      top: 0;
-      right: 0;
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+      top: -50%;
+      right: -10%;
+      width: 800px;
+      height: 800px;
+      background: radial-gradient(circle, rgba(255,215,0,0.15) 0%, transparent 70%);
       border-radius: 50%;
-      transform: translate(100px, -50px);
+      animation: float 20s ease-in-out infinite;
     }
 
     header::after {
       content: '';
       position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 300px;
-      height: 300px;
-      background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
+      bottom: -30%;
+      left: -5%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(100,200,255,0.1) 0%, transparent 70%);
       border-radius: 50%;
-      transform: translate(-100px, 50px);
+      animation: float 25s ease-in-out infinite reverse;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(30px); }
     }
 
     .header-content {
       position: relative;
-      z-index: 2;
+      z-index: 10;
+      text-align: center;
+      max-width: 900px;
+      padding: 60px 40px;
+      animation: fadeInUp 0.8s ease;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .logo-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 30px;
+      animation: slideInDown 0.8s ease 0.2s both;
+    }
+
+    @keyframes slideInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .logo-placeholder {
+      width: 80px;
+      height: 80px;
+      background: linear-gradient(135deg, #ffd700, #ffed4e);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+      font-weight: 800;
+      color: #1f4e79;
+      box-shadow: 0 8px 24px rgba(255, 215, 0, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .logo-placeholder::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      animation: shine 3s infinite;
+    }
+
+    @keyframes shine {
+      0% { left: -100%; }
+      50% { left: 100%; }
+      100% { left: 100%; }
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      text-align: left;
+    }
+
+    .logo-text .brand {
+      font-size: 24px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: #ffd700;
+    }
+
+    .logo-text .subbrand {
+      font-size: 14px;
+      opacity: 0.9;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
     }
 
     .kicker {
@@ -69,49 +167,129 @@
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.15em;
-      font-size: 12px;
-      background: rgba(255, 255, 255, 0.2);
-      padding: 8px 16px;
-      border-radius: 20px;
-      margin-bottom: 20px;
+      font-size: 13px;
+      background: rgba(255, 215, 0, 0.25);
+      padding: 10px 20px;
+      border-radius: 25px;
+      margin-bottom: 25px;
       backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 215, 0, 0.5);
+      animation: slideInDown 0.8s ease 0.3s both;
     }
 
     header h1 {
-      font-size: clamp(40px, 7vw, 72px);
+      font-size: clamp(42px, 8vw, 76px);
       line-height: 1.1;
-      margin: 20px 0;
-      font-weight: 800;
-      letter-spacing: -0.5px;
+      margin: 20px 0 30px;
+      font-weight: 900;
+      letter-spacing: -1px;
+      background: linear-gradient(90deg, #fff 0%, #ffd700 50%, #fff 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: slideInDown 0.8s ease 0.4s both;
     }
 
     header p {
-      font-size: 1.1rem;
+      font-size: 1.2rem;
       opacity: 0.95;
-      max-width: 600px;
-      margin: 20px 0;
+      max-width: 650px;
+      margin: 0 auto 30px;
       font-weight: 300;
+      line-height: 1.8;
+      animation: slideInDown 0.8s ease 0.5s both;
     }
 
     .note {
-      background: rgba(255, 255, 255, 0.15);
+      background: rgba(255, 255, 255, 0.12);
       border-left: 4px solid #ffd700;
-      padding: 16px 20px;
-      border-radius: 8px;
+      padding: 18px 24px;
+      border-radius: 10px;
       color: white;
-      margin-top: 24px;
-      backdrop-filter: blur(10px);
+      margin: 30px auto 0;
+      max-width: 600px;
+      backdrop-filter: blur(15px);
       font-size: 0.95rem;
+      animation: slideInDown 0.8s ease 0.6s both;
     }
 
     .note strong {
       color: #ffd700;
     }
 
-    /* Section Styles */
+    .cta-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      margin-top: 40px;
+      flex-wrap: wrap;
+      animation: slideInDown 0.8s ease 0.7s both;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #ffd700, #ffed4e);
+      color: #1f4e79;
+      padding: 16px 36px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 800;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-size: 14px;
+      box-shadow: 0 10px 30px rgba(255, 215, 0, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-primary::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+      transition: left 0.5s ease;
+    }
+
+    .btn-primary:hover::before {
+      left: 100%;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(255, 215, 0, 0.4);
+    }
+
+    .btn-secondary {
+      background: rgba(255, 255, 255, 0.15);
+      color: white;
+      padding: 16px 36px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 800;
+      transition: all 0.3s ease;
+      border: 2px solid rgba(255, 255, 255, 0.4);
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-size: 14px;
+    }
+
+    .btn-secondary:hover {
+      background: rgba(255, 255, 255, 0.25);
+      border-color: #ffd700;
+      transform: translateY(-4px);
+    }
+
+    /* ============ SECTIONS ============ */
     section {
-      padding: 70px 0;
+      padding: 80px 0;
       border-bottom: 1px solid #e8eef6;
+      position: relative;
     }
 
     section:last-of-type {
@@ -119,12 +297,13 @@
     }
 
     section h2 {
-      font-size: 36px;
+      font-size: 42px;
       color: #1f4e79;
-      margin-bottom: 40px;
-      font-weight: 800;
+      margin-bottom: 50px;
+      font-weight: 900;
       position: relative;
-      padding-bottom: 15px;
+      padding-bottom: 20px;
+      letter-spacing: -0.5px;
     }
 
     section h2::before {
@@ -132,17 +311,18 @@
       position: absolute;
       bottom: 0;
       left: 0;
-      width: 50px;
-      height: 4px;
-      background: linear-gradient(90deg, #1f4e79, #2c5f96);
-      border-radius: 2px;
+      width: 60px;
+      height: 5px;
+      background: linear-gradient(90deg, #1f4e79, #ffd700, #2c5f96);
+      border-radius: 3px;
+      box-shadow: 0 2px 8px rgba(31, 78, 121, 0.2);
     }
 
-    /* Grid Layouts */
+    /* ============ GRIDS ============ */
     .grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 28px;
+      gap: 32px;
       margin-top: 40px;
     }
 
@@ -154,14 +334,14 @@
       grid-template-columns: repeat(4, 1fr);
     }
 
-    /* Card Styles */
+    /* ============ CARDS ============ */
     .card {
       background: white;
       border: 1px solid #e8eef6;
-      border-radius: 12px;
-      padding: 32px;
+      border-radius: 16px;
+      padding: 36px;
       transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
       position: relative;
       overflow: hidden;
     }
@@ -171,47 +351,68 @@
       position: absolute;
       top: 0;
       left: 0;
-      width: 4px;
+      width: 5px;
+      height: 0;
+      background: linear-gradient(180deg, #1f4e79, #ffd700);
+      transition: height 0.3s ease;
+    }
+
+    .card::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -50%;
+      width: 100%;
       height: 100%;
-      background: linear-gradient(180deg, #1f4e79, #2c5f96);
-      transform: scaleY(0);
-      transform-origin: top;
-      transition: transform 0.3s ease;
+      background: radial-gradient(circle, rgba(255, 215, 0, 0.1) 0%, transparent 70%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
     }
 
     .card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 12px 28px rgba(31, 78, 121, 0.15);
-      border-color: #2c5f96;
+      transform: translateY(-12px);
+      box-shadow: 0 20px 40px rgba(31, 78, 121, 0.12);
+      border-color: #1f4e79;
     }
 
     .card:hover::before {
-      transform: scaleY(1);
+      height: 100%;
+    }
+
+    .card:hover::after {
+      opacity: 1;
     }
 
     .card h3 {
-      font-size: 20px;
+      font-size: 22px;
       color: #1f4e79;
-      margin-bottom: 12px;
-      font-weight: 700;
+      margin-bottom: 16px;
+      font-weight: 800;
+      position: relative;
+      z-index: 2;
     }
 
     .card p {
       color: #555;
       font-size: 0.95rem;
       line-height: 1.8;
+      position: relative;
+      z-index: 2;
     }
 
     .card ul {
       list-style: none;
       padding: 0;
+      position: relative;
+      z-index: 2;
     }
 
     .card ul li {
-      padding-left: 28px;
-      margin-bottom: 12px;
+      padding-left: 32px;
+      margin-bottom: 14px;
       position: relative;
       color: #555;
+      font-weight: 500;
     }
 
     .card ul li::before {
@@ -219,26 +420,26 @@
       position: absolute;
       left: 0;
       color: #1f4e79;
-      font-weight: 800;
+      font-weight: 900;
       font-size: 18px;
     }
 
-    /* KPI Styles */
+    /* ============ KPI SECTION ============ */
     .kpis {
       display: grid;
       grid-template-columns: repeat(5, 1fr);
-      gap: 16px;
-      margin: 40px 0;
+      gap: 20px;
+      margin: 50px 0;
     }
 
     .kpi {
       background: linear-gradient(135deg, #1f4e79 0%, #2c5f96 100%);
       color: white;
-      border-radius: 12px;
-      padding: 24px 20px;
+      border-radius: 16px;
+      padding: 32px 24px;
       text-align: center;
       transition: all 0.3s ease;
-      box-shadow: 0 4px 12px rgba(31, 78, 121, 0.2);
+      box-shadow: 0 8px 24px rgba(31, 78, 121, 0.2);
       position: relative;
       overflow: hidden;
     }
@@ -248,11 +449,23 @@
       position: absolute;
       top: 0;
       right: 0;
-      width: 80px;
-      height: 80px;
-      background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+      width: 100px;
+      height: 100px;
+      background: radial-gradient(circle, rgba(255, 215, 0, 0.2) 0%, transparent 70%);
       border-radius: 50%;
       transform: translate(30px, -30px);
+    }
+
+    .kpi::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, transparent, #ffd700, transparent);
+      opacity: 0;
+      transition: opacity 0.3s ease;
     }
 
     .kpi:nth-child(even) {
@@ -260,8 +473,12 @@
     }
 
     .kpi:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 8px 20px rgba(31, 78, 121, 0.3);
+      transform: translateY(-12px);
+      box-shadow: 0 16px 40px rgba(31, 78, 121, 0.3);
+    }
+
+    .kpi:hover::after {
+      opacity: 1;
     }
 
     .kpi span {
@@ -269,36 +486,39 @@
       font-size: 12px;
       opacity: 0.85;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
-      margin-bottom: 10px;
-      font-weight: 600;
+      letter-spacing: 0.08em;
+      margin-bottom: 12px;
+      font-weight: 700;
     }
 
     .kpi strong {
       display: block;
-      font-size: 32px;
-      font-weight: 800;
-      letter-spacing: -0.5px;
+      font-size: 40px;
+      font-weight: 900;
+      letter-spacing: -1px;
+      position: relative;
+      z-index: 2;
     }
 
-    /* Buttons */
+    /* ============ BUTTONS ============ */
     .button {
       display: inline-block;
       background: linear-gradient(135deg, #1f4e79, #2c5f96);
       color: white;
       text-decoration: none;
-      padding: 14px 28px;
-      border-radius: 8px;
-      font-weight: 700;
-      margin-top: 16px;
+      padding: 16px 32px;
+      border-radius: 10px;
+      font-weight: 800;
+      margin-top: 20px;
       transition: all 0.3s ease;
       border: 2px solid transparent;
       cursor: pointer;
       text-transform: uppercase;
-      letter-spacing: 0.05em;
-      font-size: 13px;
+      letter-spacing: 0.08em;
+      font-size: 12px;
       position: relative;
       overflow: hidden;
+      box-shadow: 0 6px 16px rgba(31, 78, 121, 0.2);
     }
 
     .button::before {
@@ -308,13 +528,13 @@
       left: -100%;
       width: 100%;
       height: 100%;
-      background: rgba(255, 255, 255, 0.2);
-      transition: left 0.3s ease;
+      background: linear-gradient(90deg, transparent, rgba(255, 215, 0, 0.3), transparent);
+      transition: left 0.4s ease;
     }
 
     .button:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 8px 20px rgba(31, 78, 121, 0.3);
+      transform: translateY(-4px);
+      box-shadow: 0 12px 28px rgba(31, 78, 121, 0.3);
     }
 
     .button:hover::before {
@@ -325,21 +545,22 @@
       margin-right: 8px;
     }
 
-    /* Downloads Section */
+    /* ============ DOWNLOADS ============ */
     .downloads {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 28px;
+      gap: 32px;
     }
 
     .download-card {
       background: white;
       border: 2px solid #e8eef6;
-      border-radius: 12px;
-      padding: 36px 28px;
+      border-radius: 16px;
+      padding: 40px 32px;
       text-align: center;
       transition: all 0.3s ease;
       position: relative;
+      overflow: hidden;
     }
 
     .download-card::before {
@@ -348,8 +569,8 @@
       top: 0;
       left: 0;
       right: 0;
-      height: 4px;
-      background: linear-gradient(90deg, #1f4e79, #2c5f96);
+      height: 5px;
+      background: linear-gradient(90deg, #1f4e79, #ffd700, #2c5f96);
       transform: scaleX(0);
       transform-origin: left;
       transition: transform 0.3s ease;
@@ -357,8 +578,8 @@
 
     .download-card:hover {
       border-color: #1f4e79;
-      box-shadow: 0 12px 28px rgba(31, 78, 121, 0.15);
-      transform: translateY(-8px);
+      box-shadow: 0 16px 40px rgba(31, 78, 121, 0.15);
+      transform: translateY(-12px);
     }
 
     .download-card:hover::before {
@@ -366,179 +587,68 @@
     }
 
     .file-icon {
-      font-size: 48px;
+      font-size: 56px;
       color: #1f4e79;
-      margin-bottom: 16px;
+      margin-bottom: 20px;
+      position: relative;
+      z-index: 2;
     }
 
     .download-card h3 {
-      font-size: 20px;
+      font-size: 22px;
       color: #1f4e79;
-      margin-bottom: 12px;
-      font-weight: 700;
+      margin-bottom: 14px;
+      font-weight: 800;
+      position: relative;
+      z-index: 2;
     }
 
     .download-card p {
       color: #666;
-      font-size: 0.9rem;
-      margin-bottom: 20px;
-    }
-
-    /* Section: Problem & Solution */
-    .problem-section {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      align-items: center;
-    }
-
-    .problem-section h2 {
-      grid-column: 1 / -1;
-    }
-
-    .problem-text h3 {
-      color: #1f4e79;
-      font-size: 24px;
-      margin-bottom: 16px;
-    }
-
-    .problem-text p {
-      color: #555;
-      line-height: 1.8;
-      margin-bottom: 16px;
-    }
-
-    /* Approach Cards */
-    .approach-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-    }
-
-    .approach-card {
-      background: white;
-      border: 1px solid #e8eef6;
-      border-radius: 12px;
-      padding: 28px;
-      position: relative;
-      overflow: hidden;
-      transition: all 0.3s ease;
-    }
-
-    .approach-card::before {
-      content: attr(data-number);
-      position: absolute;
-      top: -10px;
-      right: -10px;
-      font-size: 80px;
-      font-weight: 800;
-      opacity: 0.05;
-      color: #1f4e79;
-    }
-
-    .approach-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 28px rgba(31, 78, 121, 0.15);
-    }
-
-    .approach-card h3 {
-      color: #1f4e79;
-      font-size: 18px;
-      margin-bottom: 12px;
-      font-weight: 700;
+      font-size: 0.95rem;
+      margin-bottom: 24px;
+      line-height: 1.6;
       position: relative;
       z-index: 2;
     }
 
-    .approach-card p {
-      color: #666;
-      font-size: 0.9rem;
-      position: relative;
-      z-index: 2;
-    }
-
-    /* Skills Section */
-    .skills-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
-    }
-
-    .skill-item {
-      background: white;
-      padding: 24px;
-      border-radius: 12px;
-      border: 1px solid #e8eef6;
-      transition: all 0.3s ease;
-    }
-
-    .skill-item:hover {
-      border-color: #1f4e79;
-      box-shadow: 0 8px 20px rgba(31, 78, 121, 0.1);
-      transform: translateY(-4px);
-    }
-
-    .skill-item ul {
-      list-style: none;
-    }
-
-    .skill-item li {
-      padding: 8px 0;
-      color: #555;
-      position: relative;
-      padding-left: 24px;
-    }
-
-    .skill-item li::before {
-      content: '→';
-      position: absolute;
-      left: 0;
-      color: #1f4e79;
-      font-weight: bold;
-    }
-
-    /* Footer */
+    /* ============ FOOTER ============ */
     footer {
       background: linear-gradient(135deg, #1f4e79 0%, #2c5f96 100%);
       color: white;
-      padding: 48px 0;
+      padding: 60px 0;
       text-align: center;
-      margin-top: 60px;
+      margin-top: 80px;
+      position: relative;
+    }
+
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: -200px;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(255, 215, 0, 0.08) 0%, transparent 70%);
+      border-radius: 50%;
     }
 
     footer p {
-      margin: 8px 0;
+      margin: 10px 0;
       opacity: 0.9;
       font-weight: 500;
+      position: relative;
+      z-index: 2;
     }
 
-    .social-links {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 20px;
+    footer .divider {
+      width: 50px;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, #ffd700, transparent);
+      margin: 20px auto;
     }
 
-    .social-links a {
-      color: white;
-      width: 40px;
-      height: 40px;
-      border-radius: 50%;
-      background: rgba(255, 255, 255, 0.2);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.3s ease;
-      text-decoration: none;
-    }
-
-    .social-links a:hover {
-      background: white;
-      color: #1f4e79;
-      transform: translateY(-4px);
-    }
-
-    /* Responsive Design */
+    /* ============ RESPONSIVE ============ */
     @media (max-width: 1024px) {
       .grid, .grid-3, .grid-4 {
         grid-template-columns: repeat(2, 1fr);
@@ -548,25 +658,57 @@
         grid-template-columns: repeat(3, 1fr);
       }
 
-      .approach-grid {
+      .downloads {
         grid-template-columns: repeat(2, 1fr);
       }
 
-      .downloads {
-        grid-template-columns: repeat(2, 1fr);
+      header h1 {
+        font-size: 48px;
+      }
+
+      section h2 {
+        font-size: 36px;
       }
     }
 
     @media (max-width: 768px) {
       header {
-        padding: 60px 0 40px;
+        min-height: auto;
+        padding: 60px 0;
+      }
+
+      .header-content {
+        padding: 40px 24px;
       }
 
       header h1 {
-        font-size: 32px;
+        font-size: 36px;
       }
 
-      .grid, .grid-3, .grid-4, .approach-grid, .downloads, .skills-grid {
+      header p {
+        font-size: 1rem;
+      }
+
+      .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .btn-primary, .btn-secondary {
+        width: 100%;
+        max-width: 300px;
+      }
+
+      .logo-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .logo-text {
+        text-align: center;
+      }
+
+      .grid, .grid-3, .grid-4, .downloads {
         grid-template-columns: 1fr;
       }
 
@@ -574,108 +716,137 @@
         grid-template-columns: repeat(2, 1fr);
       }
 
+      .card {
+        padding: 28px;
+      }
+
       section {
-        padding: 50px 0;
+        padding: 60px 0;
       }
 
       section h2 {
         font-size: 28px;
+        margin-bottom: 40px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo-placeholder {
+        width: 60px;
+        height: 60px;
+        font-size: 32px;
       }
 
-      .card {
-        padding: 24px;
-      }
-
-      .kpi {
-        padding: 20px 16px;
+      header h1 {
+        font-size: 28px;
       }
 
       .kpi strong {
-        font-size: 24px;
+        font-size: 28px;
       }
-    }
 
-    /* Animations */
-    @keyframes fadeInUp {
-      from {
-        opacity: 0;
-        transform: translateY(30px);
+      .kpis {
+        grid-template-columns: 1fr;
       }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    .card, .kpi, .button {
-      animation: fadeInUp 0.6s ease;
     }
   </style>
 </head>
 <body>
+  <!-- ========== HERO HEADER ========== -->
   <header>
-    <div class="wrap header-content">
-      <div class="kicker">📊 Independent Analytics Case Study</div>
-      <h1>How BluChip Can Master Member Acquisition & Engagement</h1>
-      <p>A comprehensive loyalty program growth strategy exploring acquisition channels, customer segmentation, and partnership optimization with data-driven insights.</p>
+    <div class="header-content">
+      <div class="logo-section">
+        <div class="logo-placeholder">IB</div>
+        <div class="logo-text">
+          <div class="brand">IndiGo BluChip</div>
+          <div class="subbrand">Loyalty Analytics</div>
+        </div>
+      </div>
+
+      <div class="kicker">📊 Data-Driven Growth Strategy</div>
+      
+      <h1>Master Member Acquisition & Engagement</h1>
+      
+      <p>A comprehensive, data-backed loyalty program growth strategy analyzing acquisition channels, customer segmentation, partnership optimization, and revenue impact using advanced analytics techniques.</p>
+      
       <div class="note">
-        <strong>✓ Transparency:</strong> This analysis is based on publicly available IndiGo BluChip information. Member data and metrics are simulated for demonstration purposes.
+        <strong>✓ Professional Case Study:</strong> Based on publicly available IndiGo BluChip data with simulated member analytics for portfolio demonstration.
+      </div>
+
+      <div class="cta-buttons">
+        <a href="#project-files" class="btn-primary">
+          <i class="fas fa-arrow-down"></i> Explore Analysis
+        </a>
+        <a href="https://github.com/Vendetta-tech/indigo-loyalty-case-study" target="_blank" class="btn-secondary">
+          <i class="fas fa-github"></i> View Repository
+        </a>
       </div>
     </div>
   </header>
 
-  <section>
-    <div class="wrap problem-section">
-      <h2>The Challenge & Opportunity</h2>
-      <div class="problem-text">
-        <h3>🎯 The Problem</h3>
-        <p>Growing a loyalty program goes beyond sign-ups. The real challenge is transforming new members into active, repeat customers while building meaningful partner touchpoints between transactions.</p>
-        <p>Most programs measure success by volume alone, missing the deeper opportunity to understand member quality and lifetime value.</p>
-      </div>
-      <div class="card">
-        <h3>Business Questions</h3>
-        <p><strong>Which acquisition channels</strong> bring the most valuable members?</p>
-        <p><strong>How can campaigns</strong> move members through the full funnel—from awareness to conversion?</p>
-        <p><strong>Which segments and partners</strong> deserve strategic focus and investment?</p>
-        <p><strong>How do we</strong> keep members engaged between flight purchases?</p>
-      </div>
-    </div>
-  </section>
-
+  <!-- ========== PROBLEM SECTION ========== -->
   <section>
     <div class="wrap">
-      <h2>My Strategic Approach</h2>
-      <div class="approach-grid">
-        <div class="approach-card" data-number="01">
-          <h3>📍 Map the Ecosystem</h3>
-          <p>Analyzed publicly available BluChip program structure, membership benefits, and partner categories.</p>
+      <h2>The Business Challenge</h2>
+      <div class="grid">
+        <div>
+          <div class="card">
+            <h3>🎯 The Core Problem</h3>
+            <p>Growing a loyalty program extends far beyond acquiring new sign-ups. The true challenge lies in converting members into active, engaged repeat customers while building strategic touchpoints between flight purchases.</p>
+            <p style="margin-top: 16px; color: #1f4e79; font-weight: 600;">Most programs measure success by volume, missing critical insights about member quality and lifetime value.</p>
+          </div>
         </div>
-        <div class="approach-card" data-number="02">
-          <h3>💾 Build Data Foundation</h3>
-          <p>Created a realistic simulated dataset of 1,000 member profiles to enable rigorous analysis.</p>
-        </div>
-        <div class="approach-card" data-number="03">
-          <h3>📈 Design Reporting</h3>
-          <p>Built comprehensive tracking across acquisition, engagement, conversion, cost, and revenue impact.</p>
-        </div>
-        <div class="approach-card" data-number="04">
-          <h3>💡 Generate Insights</h3>
-          <p>Translated analysis into actionable recommendations for segmentation and partnership strategy.</p>
+        <div>
+          <div class="card">
+            <h3>❓ Key Questions</h3>
+            <ul style="margin-top: 16px;">
+              <li><strong>Which channels</strong> attract high-value members?</li>
+              <li><strong>How do campaigns</strong> drive full-funnel conversion?</li>
+              <li><strong>Which segments & partners</strong> warrant strategic focus?</li>
+              <li><strong>How to maintain</strong> engagement between transactions?</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- ========== APPROACH SECTION ========== -->
   <section>
     <div class="wrap">
-      <h2>Key Performance Metrics</h2>
+      <h2>Strategic Methodology</h2>
+      <div class="grid grid-4">
+        <div class="card">
+          <h3>📍 01. Ecosystem Analysis</h3>
+          <p>Researched publicly available BluChip program structure, benefits architecture, and partner ecosystem categories.</p>
+        </div>
+        <div class="card">
+          <h3>💾 02. Data Foundation</h3>
+          <p>Built a realistic simulated dataset of 1,000 member profiles with behavioral patterns for rigorous analysis.</p>
+        </div>
+        <div class="card">
+          <h3>📈 03. Metrics Framework</h3>
+          <p>Designed comprehensive tracking across acquisition, engagement, conversion, cost, and revenue impact.</p>
+        </div>
+        <div class="card">
+          <h3>💡 04. Actionable Insights</h3>
+          <p>Translated analysis into strategic recommendations for segmentation and partnership optimization.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== KPI SECTION ========== -->
+  <section>
+    <div class="wrap">
+      <h2>Performance Metrics & Analysis</h2>
       <div class="kpis">
         <div class="kpi">
-          <span>Simulated Members</span>
+          <span>Total Members</span>
           <strong>1,000</strong>
         </div>
         <div class="kpi">
-          <span>Active Members</span>
+          <span>Active Base</span>
           <strong>939</strong>
         </div>
         <div class="kpi">
@@ -692,14 +863,14 @@
         </div>
       </div>
 
-      <div class="grid grid-3" style="margin-top: 40px;">
+      <div class="grid grid-3" style="margin-top: 50px;">
         <div class="card">
-          <h3>📊 Funnel Logic</h3>
-          <p><strong>Acquisition → Engagement → Conversion → Value</strong></p>
-          <p>This framework reveals quality, not just volume. It shows which channels drive members who actually engage and convert.</p>
+          <h3>📊 Funnel Framework</h3>
+          <p><strong style="color: #1f4e79;">Acquisition → Engagement → Conversion → Value</strong></p>
+          <p style="margin-top: 12px;">This proven framework reveals member quality, not just volume. It identifies which channels drive members who actually engage and convert.</p>
         </div>
         <div class="card">
-          <h3>🔍 What We Measured</h3>
+          <h3>🔍 Measurement Scope</h3>
           <ul>
             <li>Acquisition channels</li>
             <li>Member activation</li>
@@ -709,101 +880,105 @@
           </ul>
         </div>
         <div class="card">
-          <h3>💼 Core Insights</h3>
+          <h3>🎯 Core Insights</h3>
           <ul>
-            <li>Quality beats volume</li>
-            <li>Funnels enable clarity</li>
-            <li>Partners keep habits alive</li>
-            <li>Segment before sending</li>
+            <li>Quality outweighs volume</li>
+            <li>Funnels drive clarity</li>
+            <li>Partners sustain habits</li>
+            <li>Segmentation enables precision</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- ========== KEY INSIGHTS ========== -->
   <section>
     <div class="wrap">
-      <h2>Critical Insights</h2>
+      <h2>Strategic Insights</h2>
       <div class="grid grid-4">
         <div class="card">
           <h3>📈 Volume is Incomplete</h3>
-          <p>Measure each channel from sign-up through activation, repeat activity, and conversion—not just acquisition numbers.</p>
+          <p>Measure each channel from sign-up through activation, repeat engagement, and conversion—not acquisition numbers alone.</p>
         </div>
         <div class="card">
           <h3>🎯 Build Funnels</h3>
-          <p>Reach, engagement, cost, and value must sit together in one scorecard for clarity and accountability.</p>
+          <p>Reach, engagement, cost, and value must sit together in one scorecard for accountability and strategic decisions.</p>
         </div>
         <div class="card">
           <h3>🔗 Partners Create Habits</h3>
-          <p>Everyday spend, banking, and travel partners keep loyalty active between flight purchases.</p>
+          <p>Everyday spend, banking, and travel partners keep loyalty active between flights through consistent touchpoints.</p>
         </div>
         <div class="card">
           <h3>👥 Segment Early</h3>
-          <p>New members, infrequent travellers, and VFFs need different journeys, messaging, and investment.</p>
+          <p>New members, infrequent travelers, and VFFs require different journeys, messaging, and investment strategies.</p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- ========== PARTNER ECOSYSTEM ========== -->
   <section>
     <div class="wrap">
       <h2>Partner Ecosystem Strategy</h2>
       <div class="grid grid-4">
         <div class="card">
-          <h3>🏦 Banking</h3>
-          <p><strong>Role:</strong> Acquire members and encourage repeat earning through co-branded products.</p>
+          <h3>🏦 Banking Partnerships</h3>
+          <p><strong>Role:</strong> Acquire members and drive repeat earning through co-branded credit products and benefits.</p>
         </div>
         <div class="card">
           <h3>🛍️ Everyday Spend</h3>
-          <p><strong>Role:</strong> Create regular touchpoints between trips with relevant, habitual purchases.</p>
+          <p><strong>Role:</strong> Create habitual touchpoints between trips with retail, dining, and lifestyle partners.</p>
         </div>
         <div class="card">
-          <h3>✈️ Travel & Stays</h3>
-          <p><strong>Role:</strong> Extend the travel journey and bundle value beyond flight redemption.</p>
+          <h3>✈️ Travel & Hospitality</h3>
+          <p><strong>Role:</strong> Extend travel journey and bundle value beyond flight redemption with stays and experiences.</p>
         </div>
         <div class="card">
           <h3>🏪 Airport Retail</h3>
-          <p><strong>Role:</strong> Activate high-intent moments around travel with relevant offers.</p>
+          <p><strong>Role:</strong> Activate high-intent moments around travel with relevant, timely offers and products.</p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- ========== RECOMMENDATIONS ========== -->
   <section>
     <div class="wrap">
       <h2>Strategic Recommendations</h2>
       <div class="grid grid-4">
         <div class="card">
           <h3>01. Measure Quality</h3>
-          <p>Track each source from sign-up through activation, repeat activity, and conversion to reveal true member value.</p>
+          <p>Track each acquisition source from sign-up through activation, repeat usage, and conversion to reveal true member value.</p>
         </div>
         <div class="card">
-          <h3>02. Segment Strategically</h3>
-          <p>Differentiate journeys for new members, infrequent travellers, and high-value frequent fliers.</p>
+          <h3>02. Segment Precision</h3>
+          <p>Differentiate journeys for new members, infrequent travelers, and high-value frequent flyers with tailored messaging.</p>
         </div>
         <div class="card">
           <h3>03. Activate Partners</h3>
-          <p>Create regular touchpoints through everyday-spend and travel-adjacent partnerships.</p>
+          <p>Create regular engagement touchpoints through everyday-spend and travel-adjacent partnerships between flights.</p>
         </div>
         <div class="card">
           <h3>04. Build Scorecards</h3>
-          <p>Review member activity, volume, engagement, and commercial value together quarterly.</p>
+          <p>Review member activity, transaction volume, engagement, and commercial value together in quarterly business reviews.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section>
+  <!-- ========== PROJECT FILES ========== -->
+  <section id="project-files">
     <div class="wrap">
-      <h2>Project Assets</h2>
-      <p style="margin-bottom: 40px; font-size: 1.05rem; color: #555;">Access the full analysis, interactive dashboard, and executive presentation below.</p>
+      <h2>Complete Case Study Assets</h2>
+      <p style="font-size: 1.05rem; color: #555; margin-bottom: 50px;">Access the full analysis, interactive dashboards, and executive presentation:</p>
       <div class="downloads">
         <div class="download-card">
           <div class="file-icon">
             <i class="fas fa-file-pdf"></i>
           </div>
           <h3>Analytics Report</h3>
-          <p>Detailed analysis with customer segments, channel performance, and insights.</p>
+          <p>Detailed analysis with customer segmentation, channel performance, revenue impact, and data-driven insights.</p>
           <a class="button" href="./IndiGo BluChip Loyalty Analytics Case Study.pdf" target="_blank" rel="noopener noreferrer">
             <i class="fas fa-download"></i> View PDF
           </a>
@@ -813,7 +988,7 @@
             <i class="fas fa-chart-bar"></i>
           </div>
           <h3>Executive Dashboard</h3>
-          <p>Interactive Excel workbook with KPIs, dashboards, and methodology notes.</p>
+          <p>Interactive Excel workbook with KPIs, dashboards, methodology notes, and comprehensive analysis.</p>
           <a class="button" href="./IndiGo_BluChip_Loyalty_Analytics_Executive.xlsx" target="_blank" rel="noopener noreferrer">
             <i class="fas fa-download"></i> View Workbook
           </a>
@@ -823,7 +998,7 @@
             <i class="fas fa-presentation"></i>
           </div>
           <h3>Presentation Deck</h3>
-          <p>Executive summary with findings, strategy, and recommendations for leadership review.</p>
+          <p>Executive summary with findings, strategic recommendations, and action items for leadership review.</p>
           <a class="button" href="./IndiGo_BluChip_Loyalty_Case_Study_Presentation.pdf" target="_blank" rel="noopener noreferrer">
             <i class="fas fa-download"></i> View Slides
           </a>
@@ -832,47 +1007,54 @@
     </div>
   </section>
 
+  <!-- ========== SKILLS ========== -->
   <section>
     <div class="wrap">
-      <h2>What This Demonstrates</h2>
-      <div class="skills-grid">
-        <div class="skill-item">
-          <h3>Analytical Skills</h3>
+      <h2>What This Project Demonstrates</h2>
+      <div class="grid grid-3">
+        <div class="card">
+          <h3>📊 Analytical Expertise</h3>
           <ul>
-            <li>Customer Research</li>
-            <li>Segmentation</li>
-            <li>Funnel Analysis</li>
-            <li>Data Modeling</li>
+            <li>Customer analytics</li>
+            <li>Segmentation modeling</li>
+            <li>Funnel analysis</li>
+            <li>Data visualization</li>
+            <li>Revenue analysis</li>
           </ul>
         </div>
-        <div class="skill-item">
-          <h3>Business Skills</h3>
+        <div class="card">
+          <h3>💼 Business Strategy</h3>
           <ul>
-            <li>Strategy Development</li>
-            <li>Partnership Analysis</li>
-            <li>Revenue Impact</li>
-            <li>KPI Definition</li>
+            <li>Program strategy</li>
+            <li>Partnership analysis</li>
+            <li>Revenue impact</li>
+            <li>KPI frameworks</li>
+            <li>Growth planning</li>
           </ul>
         </div>
-        <div class="skill-item">
-          <h3>Communication Skills</h3>
+        <div class="card">
+          <h3>🎯 Communication Skills</h3>
           <ul>
-            <li>Business Storytelling</li>
-            <li>Excel Dashboards</li>
-            <li>Executive Presentations</li>
-            <li>Data Visualization</li>
+            <li>Executive storytelling</li>
+            <li>Dashboard design</li>
+            <li>Data presentations</li>
+            <li>Insight articulation</li>
+            <li>Recommendation clarity</li>
           </ul>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- ========== FOOTER ========== -->
   <footer>
     <div class="wrap">
-      <p><strong>IndiGo BluChip Loyalty Analytics Case Study</strong></p>
-      <p>Portfolio project demonstrating data analysis, strategy development, and business insights</p>
-      <p style="margin-top: 24px; opacity: 0.7;">Designed by <strong>Omkar Pawar</strong> | 2026</p>
+      <p style="font-size: 18px; font-weight: 800; letter-spacing: -0.5px;">IndiGo BluChip Loyalty Analytics Case Study</p>
+      <div class="divider"></div>
+      <p>Portfolio project demonstrating advanced analytics, strategic thinking, and business impact</p>
+      <p style="margin-top: 30px; opacity: 0.75; font-size: 14px;">Designed & Developed by <strong>Omkar Pawar</strong> | 2026</p>
     </div>
   </footer>
+
 </body>
 </html>
